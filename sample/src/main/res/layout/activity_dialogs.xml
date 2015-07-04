@@ -1,0 +1,116 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.busata.bhammer_example.DialogsActivity">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="@dimen/default_margin"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dialogs" />
+
+                <include layout="@layout/line" />
+
+                <Button
+                    style="@style/Bhammer.Button.Raised"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin_10"
+                    android:onClick="openDialog"
+                    android:text="@string/single_dialog" />
+
+                <Button
+                    style="@style/Bhammer.Button.Raised"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:onClick="openAnswerDialog"
+                    android:text="@string/answer_dialog" />
+
+
+                <Button
+                    style="@style/Bhammer.Button.Raised"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:onClick="openComponentsDialog"
+                    android:text="@string/component_dialog" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_marginTop="@dimen/default_margin_10"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pickers" />
+
+                <include layout="@layout/line" />
+
+                <com.busata.bhammer.views.materialedittext.MaterialEditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin_10"
+                    android:focusable="false"
+                    android:hint="@string/number"
+                    android:inputType="number"
+                    android:onClick="showNumberPicker"
+                    custom:met_floatingLabel="normal" />
+
+                <com.busata.bhammer.views.materialedittext.MaterialEditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:focusable="false"
+                    android:hint="@string/date"
+                    android:inputType="date"
+                    android:onClick="showDatePicker"
+                    custom:met_floatingLabel="normal" />
+
+                <com.busata.bhammer.views.materialedittext.MaterialEditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/default_margin"
+                    android:focusable="false"
+                    android:hint="@string/time"
+                    android:inputType="time"
+                    android:onClick="showTimePicker"
+                    custom:met_floatingLabel="normal"
+                    custom:met_primaryColor="@color/primary_color" />
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

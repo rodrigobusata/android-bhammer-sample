@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.busata.bhammer_sample">
+
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activities.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".activities.FormActivity" />
+        <activity android:name=".activities.ListsActivity" />
+        <activity android:name=".activities.DialogsActivity" />
+        <activity android:name=".activities.EditTextActivity" />
+        <activity android:name=".activities.ExpandedListActivity" />
+        <activity android:name=".activities.AnimationsActivity" />
+        <activity
+            android:name=".activities.AnimationsItemActivity"
+            android:theme="@style/AppThemeTransNav" />
+        <activity
+            android:name=".activities.ListAnimationsActivity"
+            android:theme="@style/AppThemeTransNav" />
+        <activity android:name=".activities.ListAnimationsItemActivity" />
+        <activity android:name=".activities.CompoundListActivity" />
+        <activity android:name=".activities.FloatActionButtonActivity" />
+
+        <activity android:name=".activities.snackbar.SnackbarSampleActivity" />
+        <activity android:name=".activities.snackbar.SnackbarListViewSampleActivity" />
+        <activity android:name=".activities.snackbar.SnackbarRecyclerViewSampleActivity" />
+        <activity
+            android:name=".activities.snackbar.SnackbarNavigationBarTranslucentSampleActivity"
+            android:theme="@style/AppThemeTransNav" />
+        <activity android:name=".activities.snackbar.SnackbarImmersiveModeSampleActivity" />
+        <activity android:name=".activities.snackbar.SnackbarShowInDialogSampleActivity" />
+        <activity android:name=".activities.DonateActivity" />
+
+        <!--Paypal-->
+        <service
+            android:name="com.paypal.android.sdk.payments.PayPalService"
+            android:exported="false" />
+
+        <activity android:name="com.paypal.android.sdk.payments.PaymentActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.LoginActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.PaymentMethodActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.PaymentConfirmActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.PayPalFuturePaymentActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.FuturePaymentConsentActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.FuturePaymentInfoActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.PayPalProfileSharingActivity" />
+        <activity android:name="com.paypal.android.sdk.payments.ProfileSharingConsentActivity" />
+
+        <activity
+            android:name="io.card.payment.CardIOActivity"
+            android:configChanges="keyboardHidden|orientation" />
+        <activity android:name="io.card.payment.DataEntryActivity" />
+
+        <!--END-->
+    </application>
+
+</manifest>

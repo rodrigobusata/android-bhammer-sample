@@ -1,0 +1,56 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.busata.bhammer_example.DialogsActivity">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/padding_item_list">
+
+        <com.busata.bhammer.views.materialedittext.MaterialEditText
+            android:id="@+id/etDonateValue"
+            custom:met_floatingLabel="normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/donate_value"
+            android:inputType="numberDecimal" />
+
+        <RadioGroup
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/rbUsd"
+                android:checked="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/usd" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/brl" />
+
+        </RadioGroup>
+
+        <Button
+            style="@style/Bhammer.Button.Raised"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/default_margin_10"
+            android:onClick="onBuyPressed"
+            android:text="@string/donate" />
+    </LinearLayout>
+
+</LinearLayout>

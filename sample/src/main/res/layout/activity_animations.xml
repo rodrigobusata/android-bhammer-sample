@@ -1,0 +1,92 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.busata.bhammer_sample.activities.AnimationsActivity">
+
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:onClick="showImage"
+                    android:layout_width="100dp"
+                    android:layout_height="119dp" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:onClick="showImage"
+                    android:layout_width="100dp"
+                    android:layout_height="119dp" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:onClick="showImage"
+                    android:layout_width="100dp"
+                    android:layout_height="119dp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:visibility="invisible"
+                    android:gravity="center"
+                    android:background="#ccc"
+                    android:id="@+id/revealView"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+
+                    <TextView
+                        android:textSize="24sp"
+                        android:text="@string/app_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <Button
+                    android:layout_marginTop="10dp"
+                    android:onClick="reveal"
+                    android:text="@string/reveal"
+                    style="@style/Bhammer.Button.Raised"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <Button
+                    android:layout_marginTop="10dp"
+                    android:onClick="list"
+                    android:text="@string/list"
+                    style="@style/Bhammer.Button.Raised"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

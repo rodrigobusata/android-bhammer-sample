@@ -1,0 +1,3 @@
+[submodule "bhammer-android"]
+	path = bhammer-android
+	url = https://github.com/rodrigobusata/bhammer-android.git
